@@ -1,0 +1,59 @@
+ <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom1" id="nav-main">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'mainapp:home' %}">Dashy</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+           <a class="nav-link" href="{% url 'mainapp:home' %}" [routerLink]="['/home']" routerLink="/home" routerLinkActive="active">Home <span class="sr-only">(current)</span></a> 
+          <!-- <a class="nav-link" >Home</a> -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Stuff</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Board</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+           <!-- <a class="nav-link" href="">Login</a>  -->
+           <li routerLink="/login" routerLinkActive="active" *ngIf="!isLoggedIn()"><a class="nav-link" [routerLink]="['/login']">Login</a> </li>  
+           <li routerLink="/logout" routerLinkActive="active" *ngIf="isLoggedIn()"><a class="nav-link" [routerLink]="['/logout']">Logout</a> </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="">Register</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+</nav>
+
+
+<!-- HEADER -->
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 py-3">
+                <h1><span><i class="fas fa-cogs"></i></span> Dashboard <small class="text-muted hide-on-767">Manage Institute</small></h1>
+            </div>
+
+
+            
+            <div class="col-md-2 mt-4" id="ButtonAction">
+                <div class="dropdown">
+                  <button class="btn bg-custom1 text-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Action
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Create New</a>
+                    <a class="dropdown-item" href="#">Update Tables</a>
+                    <a class="dropdown-item" href="#">Manage Events</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,25 @@
+<div class="table-responsive" >
+    <table class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Opis</th>
+          <th scope="col">Uplata</th>
+          <th scope="col">Datum</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        
+        <tr  *ngFor="let f of finansije">
+          
+          <td>{{f.idFinansije}}</td>
+          <td>{{f.opis}}</td>
+          <td>{{f.uplata}}</td>
+          <td>{{f.datum}}</td>
+        </tr>
+        
+      </tbody>
+    </table>
+    </div> 
+  

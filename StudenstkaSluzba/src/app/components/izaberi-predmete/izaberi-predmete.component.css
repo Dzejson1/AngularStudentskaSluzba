@@ -1,0 +1,10 @@
+
+#predaje {
+    cursor: pointer;
+}
+
+
+table tr.highlight {
+    background-color:teal !important;
+    color: #ffffff;
+}

@@ -1,0 +1,159 @@
+
+	<!-- MAIN -->
+	
+	<section id="main" class="mt-4">
+		<div class="container-fluid">
+			<div class="row">
+
+
+				<!-- <div *ngIf="!testLogin"> -->
+					<!-- Content to render when condition is true. -->
+				<!-- SIDEBAR -->
+				<!-- *ngIf="testLogin" -->
+				<!-- -->
+				<div *ngIf="isRole()" class="col-md-3">
+				 <nav class="bg-dark navbar-dark navbar-expand-lg navbar"></nav>
+
+
+					<div class="list-group" id="sidenav">
+					  <a href="{% url 'mainapp:home' %}" class="list-group-item list-group-item-action active">
+					    <span><i class="fas fa-cogs"></i></span> Dashboard
+					  </a>
+					  
+					  <!-- asd -->
+					   <div *ngIf="isStudent()"> 
+					  <a href="#" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#submenu1"><span>
+					  	<i class="fas fa-graduation-cap"></i></span> Student 
+					  	<span class="badge badge-dark float-right">100</span>
+						
+						
+						
+					  </a>
+					  
+					  
+					  <div class="collapse" id="submenu1" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                            <!-- <li class="nav-item">                               <a class="nav-link py-0" href="#">                      <span>Polozeni ispiti</span></a></li>   -->
+							
+							
+							<li routerLink="/prefinan" routerLinkActive="active" ><a class="nav-link py-0" [routerLink]="['/prefinan']" ><span>Pregled finansija</span></a></li> 
+							<li routerLink="/izPred"   routerLinkActive="active" ><a class="nav-link py-0" [routerLink]=" ['/izPred']"  ><span>Izaberi predmete</span></a></li>
+							
+							
+							<li class="nav-item"><a class="nav-link py-0" href="#"><span>Orders3</span></a></li>
+							
+							
+						</ul>
+					  </div>
+					 </div> 
+					  <!-- asd -->
+					  
+					  
+					  
+					  <div *ngIf="isTeacher()">
+					 <a href="#" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#submenu2"><span>
+					  	<i class="fas fa-graduation-cap"></i></span> Teacher
+					  	<span class="badge badge-dark float-right">100</span>
+						
+						
+						
+					  </a>
+					  
+					  
+					  <div class="collapse" id="submenu2" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                            <!-- <li class="nav-item">                               <a class="nav-link py-0" href="#">                      <span>Polozeni ispiti</span></a></li>   -->
+							
+							
+							<li routerLink="/predmetiStudenti" routerLinkActive="active" ><a class="nav-link py-0" [routerLink]="['/predmetiStudenti']" > <span>Pregled predmeta </span></a></li> 
+							<!-- <li routerLink="/izPred"   routerLinkActive="active" ><a class="nav-link py-0" [routerLink]=" ['/izPred']"  > <span>Izaberi predmete</span></a></li> -->
+							
+							<li class="nav-item"><a class="nav-link py-0" href="#"><span>Orders2</span></a></li>
+							<li class="nav-item"><a class="nav-link py-0" href="#"><span>Orders3</span></a></li>
+							
+							
+						</ul>
+					</div>
+				</div>
+					  
+					  
+					  
+					  <a href="#" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#submenu3">
+					  	<span><i class="fas fa-university"></i></span> Department 
+					  	<span class="badge badge-dark float-right">30</span>
+					  </a>
+					  
+					   <div class="collapse" id="submenu3" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                            <li class="nav-item"><a class="nav-link py-0" href="#"><span>Department1</span></a>
+							
+							</li>
+							<li class="nav-item"><a class="nav-link py-0" href="#"><span>Department2</span></a>
+							
+							</li>
+							<li class="nav-item"><a class="nav-link py-0" href="#"><span>Department3</span></a>
+							
+							</li>
+							</ul>
+						</div>
+					  <a href="#" class="list-group-item list-group-item-action">
+					  	<span><i class="fas fa-building"></i></span> Campus
+					  	<span class="badge badge-dark float-right">20</span>
+					  </a>
+					  <a href="{% url 'clubs:clubshome' %}" class="list-group-item list-group-item-action">
+					  	<span><i class="fas fa-network-wired"></i></span> Clubs
+					  	<span class="badge badge-dark float-right">20</span>
+					  </a>
+					  <a href="#" class="list-group-item list-group-item-action">
+					  	<span><i class="fas fa-users"></i></span> Parents
+					  	<span class="badge badge-dark float-right">20</span>
+					  </a>
+					  <a href="#" class="list-group-item list-group-item-action">
+					  	<span><i class="fas fa-book-reader"></i></span> Library
+					  	<span class="badge badge-dark float-right">20</span>
+					  </a>
+					  <a href="#" class="list-group-item list-group-item-action">
+					  	<span><i class="fas fa-chalkboard-teacher"></i></span> Routine
+					  	<span class="badge badge-dark float-right">20</span>
+					  </a>
+					  <a href="#" class="list-group-item list-group-item-action">
+					  	<span><i class="fas fa-calendar-week"></i></span> Events
+					  	<span class="badge badge-dark float-right">20</span>
+					  </a>
+					</div>
+				</div> <!-- sidebar -->
+
+				<!-- </div> -->
+
+
+
+				<!-- for all pages -->
+				<!-- <div class="col-md-3"> </div> -->
+
+				 <!-- <div class="col-md-6"> -->
+					<div class="col-md-9">
+						<!-- <div class="row">   -->
+
+						
+
+						
+
+							<router-outlet></router-outlet>
+
+
+
+
+
+
+						<!-- </div> -->
+					
+					    <!-- </div> -->
+            
+					<!-- </div> -->
+					</div>  
+			</div> <!-- row -->
+		</div>  <!-- container of main -->
+	</section> <!-- main section -->
+
+
+	

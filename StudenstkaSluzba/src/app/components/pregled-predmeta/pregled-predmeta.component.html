@@ -1,0 +1,74 @@
+<div class="table-responsive" >
+  <table class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id </th>
+        <th scope="col">Naziv</th>
+        <th scope="col">Broj semestra</th>
+        <th scope="col">ESPB</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      
+      <!-- -->
+      <tr id="predaje" *ngFor="let p of predmeti ; index as i" (click)="highlightRow(i+1)" [ngClass] = "{'highlight' : i+1== selectedId}">
+        
+        
+        <td>{{p.idPredmet}}</td>
+        <td>{{p.naziv}}</td>
+        <td>{{p.brojSemestra}}</td>
+        <td>{{p.espb}}</td>
+       
+      </tr>
+    </tbody>
+  </table>
+  </div>  
+  
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            
+          </div>
+          <div class="col-6">
+           
+          </div>
+          <div class="col">
+           
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            
+          </div>
+          <div class="col-5">
+            
+          </div>
+          <div class="col">
+            
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            
+          </div>
+          <div class="col-5">
+            <button type="button" class="btn btn-success" (click)="zapamtiKliknuto()" [disabled]="!selectedId">Prikazi studente</button>
+          </div>
+          <div class="col">
+            
+          </div>
+        </div>
+
+      </div>
+
+    
+
+      
+      
+  
+

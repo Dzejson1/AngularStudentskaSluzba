@@ -1,0 +1,71 @@
+<!-- 
+    <table  class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg">
+      <thead>
+        <tr>
+          <th scope="col">Student Id</th>
+          <th scope="col">Student name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Mobile number</th>
+          <th class="text-center" scope="col">Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+     
+        <tr>
+          <th scope="row">studentkey</th>
+          <td>studentfirstName studentlastName</td>
+          <td>studentemail</td>
+          <td>studentmobileNumber</td>
+          <td class="text-center action-block">
+            
+          </td>
+        </tr>
+        <tr>
+            <th scope="row">studentkey</th>
+            <td>studentfirstName studentlastName</td>
+            <td>studentemail</td>
+            <td>studentmobileNumber</td>
+            <td class="text-center action-block">
+         
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">studentkey</th>
+            <td>studentfirstName studentlastName</td>
+            <td>studentemail</td>
+            <td>studentmobileNumber</td>
+            <td class="text-center action-block">
+              
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div> -->
+
+
+
+
+  <div class="table-responsive" >
+  <table class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Naziv</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      
+      
+      <tr  *ngFor="let p of predmet">
+        
+        <td>{{p.idPredmet}}</td>
+        <td>{{p.naziv}}</td>
+       
+      </tr>
+      
+    </tbody>
+  </table>
+  </div> 
+
+ 
